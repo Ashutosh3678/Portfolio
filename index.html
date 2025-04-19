@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S Ashutosh Singh - Portfolio</title>
+    <title>Ashutosh Singh - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-logo">AS</div>
+        <!-- <div class="nav-logo">AS</div> -->
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -21,17 +22,34 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>S Ashutosh Singh</h1>
-            <h2>Web Developer | BTech Student</h2>
-            <p>Turning ideas into interactive realities</p>
+            <div class="shapes-container">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+            
+            <div class="greeting">Hello, I'm</div>
+            <h1 class="name">S Ashutosh Singh</h1>
+            <div class="title">Web Developer & Designer</div>
+            <p class="bio">Passionate about creating beautiful and functional websites that solve real-world problems.</p>
             <div class="cta-buttons">
-                <a href="#contact" class="cta-primary">Contact Me</a>
-                <a href="#projects" class="cta-secondary">View Work</a>
+                <a href="#projects" class="cta-button primary">View My Work</a>
+                <a href="#contact" class="cta-button secondary">Get In Touch</a>
             </div>
         </div>
     </section>
@@ -42,6 +60,20 @@
         <div class="about-content">
             <div class="about-text">
                 <p>I'm a second-year BTech student specializing in Computer Science and Data Science at MLR Institute of Technology. Passionate about web development and artificial intelligence, I combine technical skills with creative problem-solving abilities.</p>
+                <div class="key-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Technologies Mastered</span>
+                    </div>
+                </div>
             </div>
             <div class="education">
                 <h3>Education</h3>
@@ -76,6 +108,21 @@
                     <span>Bootstrap</span>
                     <span>Express.js</span>
                     <span>MongoDB</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="skill-charts">
+            <div class="skill-chart">
+                <h3>Programming Languages</h3>
+                <div class="chart-container">
+                    <canvas id="languagesChart"></canvas>
+                </div>
+            </div>
+            <div class="skill-chart">
+                <h3>Web Technologies</h3>
+                <div class="chart-container">
+                    <canvas id="webTechChart"></canvas>
                 </div>
             </div>
         </div>
@@ -185,12 +232,44 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <h2 class="section-title">Projects</h2>
-        <div class="project-card">
-            <h3>Deepfake Detection System</h3>
-            <p>A web-based solution that leverages AI to detect manipulated videos. Users can upload videos to determine their authenticity through advanced deep learning algorithms.</p>
-            <div class="project-tech">
-                <span>AI/ML</span>
-                <span>Web Development</span>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400/111111/00ff95?text=Deepfake+Detection" alt="Deepfake Detection System">
+                </div>
+                <div class="project-content">
+                    <h3>Deepfake Detection System</h3>
+                    <p>A web-based solution that leverages AI to detect manipulated videos. Users can upload videos to determine their authenticity through advanced deep learning algorithms.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>TensorFlow</span>
+                        <span>Web Development</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/600x400/111111/00ff95?text=Portfolio+Website" alt="Portfolio Website">
+                </div>
+                <div class="project-content">
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript to showcase my skills, projects, and experience.</p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Chart.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -199,25 +278,42 @@
     <section id="experience" class="experience">
         <h2 class="section-title">Experience</h2>
         <div class="exp-card">
-            <h3>Web Developer Intern</h3>
-            <p class="company">Brain O Vision</p>
-            <p class="duration">Present</p>
-            <ul class="responsibilities">
-                <li>Working on web development projects</li>
-                <li>Implementing responsive designs</li>
-                <li>Collaborating with team members</li>
-            </ul>
+            <div class="exp-icon">
+                <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="exp-content">
+                <h3>Web Developer Intern</h3>
+                <p class="company">Brain O Vision</p>
+                <p class="duration">Present</p>
+                <ul class="responsibilities">
+                    <li>Working on web development projects</li>
+                    <li>Implementing responsive designs</li>
+                    <li>Collaborating with team members</li>
+                </ul>
+            </div>
         </div>
         
         <div class="achievements">
             <h3>Achievements</h3>
-            <div class="achievement-item">
-                <i class="fas fa-trophy"></i>
-                <p>Winner - Zignasa National Hackathon</p>
-            </div>
-            <div class="achievement-item">
-                <i class="fas fa-users"></i>
-                <p>Workshop Organizer at MLR Institute of Technology</p>
+            <div class="achievement-items">
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Winner - Zignasa National Hackathon</h4>
+                        <p>Developed an innovative solution that earned first place among 50+ teams</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Workshop Organizer at MLR Institute of Technology</h4>
+                        <p>Led technical workshops on web development fundamentals for 30+ students</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -259,7 +355,19 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 S Ashutosh Singh. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2024 S Ashutosh Singh. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="back-to-top">
+                <a href="#home"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
