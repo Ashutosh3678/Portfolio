@@ -18,7 +18,7 @@ export const profile: Profile = {
   linkedinUrl,
   calendarUrl: "https://cal.com/ariz-nerd-vlsr3j/30min",
   currentlyBuilding:
-    "Currently building — Arcalist, a visual bookmark manager for focused browsing.",
+    "Currently Learning - Devops and working with a great team at Atalgo",
   bio: "I build full-stack web products end-to-end, with a strong focus on backend systems, clean APIs, scalable architecture, and product ownership. Currently working with TypeScript, React, Next.js, Node.js, PostgreSQL, and modern developer tooling.",
   socials: createSocials(githubUsername, email),
 };
