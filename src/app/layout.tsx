@@ -40,11 +40,11 @@ export const metadata: Metadata = {
     description:
       "Backend and full-stack developer focused on scalable APIs, MERN apps, PostgreSQL, Docker, and product engineering.",
     url: "https://arizfaiyaz.vercel.app/",
-    siteName: "Ariz Faiyaz Portfolio",
+    siteName: "Ariz Faiyaz",
     type: "website",
     images: [
       {
-        url: "https://arizfaiyaz.vercel.app/",
+        url: "/images/projects/og-image.png",
         width: 1200,
         height: 630,
         alt: "Ariz Faiyaz Portfolio",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     title: "Ariz Faiyaz | Backend & Full Stack Developer",
     description:
       "Portfolio of Ariz Faiyaz, backend and full-stack developer.",
-    images: ["https://arizfaiyaz.vercel.app/"],
+    images: ["/images/projects/og-image.png"],
   },
 };
 

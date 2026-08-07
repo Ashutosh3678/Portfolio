@@ -6,10 +6,26 @@ import { MusicListeningButton } from "@/components/portfolio/music-listening-but
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { QuoteSection } from "@/components/sections/quote-section";
 import { TechStackSection } from "@/components/sections/tech-stack-section";
+import { siteConfig } from "@/lib/constants";
+
 
 export default function Home() {
+  // Define the WebSite structured data using your constants
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      // Use siteConfig.name if you added it, otherwise fallback to siteConfig.author
+      name: siteConfig.author, 
+      url: siteConfig.url,
+    };
+  
   return (
     <>
+      <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+  
       <HeroSection />
       <MusicListeningButton />
       <ContributionSection />
@@ -18,6 +34,7 @@ export default function Home() {
       <ExperienceSection />
       <ContactSection />
       <QuoteSection />
+      
     </>
   );
 }

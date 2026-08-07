@@ -1,5 +1,6 @@
 export const siteConfig = {
-  url: "https://arizfaiyaz.example.com",
+  name: "Ariz Faiyaz",
+  url: "https://arizfaiyaz.vercel.app/",
   title: "Ariz Faiyaz - Full-Stack Developer",
   description:
     "Personal developer portfolio for Ariz Faiyaz, a backend-focused full-stack developer building clean, scalable web products.",
