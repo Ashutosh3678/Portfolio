@@ -26,14 +26,6 @@ const contactRows = [
     external: false,
   },
   {
-    label: "ashutosh.works",
-    description:
-      "Visit my personal website to explore my work and projects.",
-    href: profile.websiteUrl,
-    icon: ArrowUpRight,
-    external: true,
-  },
-  {
     label: "Connect on X",
     description:
       "Follow my builds, updates, experiments, and random tech thoughts.",
