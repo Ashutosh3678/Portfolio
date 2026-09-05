@@ -1,11 +1,11 @@
 export const heroRoles = [
   "Full-Stack Developer",
   "Backend-focused Builder",
-  "Open Source Contributor",
-  "Product Builder",
-  "Tech Tinkerer",
-  "Debugger",
+  "Hackathon Winner",
+  "RAG System Builder",
   "API Builder",
+  "ML Enthusiast",
   "Problem Solver",
+  "Debugger",
   "Curious Builder",
 ];

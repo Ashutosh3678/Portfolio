@@ -2,7 +2,20 @@ import Image from "next/image";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import type { TechStackItem } from "@/types/portfolio";
 
-const fallbackIconSlugs = new Set(["neondb", "zod"]);
+const fallbackIconSlugs = new Set([
+  "neondb",
+  "zod",
+  "cpp",
+  "sql",
+  "html",
+  "css",
+  "flask",
+  "oracle",
+  "firebase",
+  "langchain",
+  "heroku",
+  "render",
+]);
 
 export function TechIcon({ item }: { item: TechStackItem }) {
   const iconPath = `/icons/tech/${item.iconSlug}.svg`;

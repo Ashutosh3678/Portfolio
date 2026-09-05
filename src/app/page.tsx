@@ -1,3 +1,4 @@
+import { AchievementsSection } from "@/components/sections/achievements-section";
 import { ContactSection } from "@/components/sections/contact-section";
 import { ContributionSection } from "@/components/sections/contribution-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
@@ -32,6 +33,7 @@ export default function Home() {
       <TechStackSection />
       <ProjectsSection />
       <ExperienceSection />
+      <AchievementsSection />
       <ContactSection />
       <QuoteSection />
       

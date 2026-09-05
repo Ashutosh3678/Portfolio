@@ -24,11 +24,11 @@ export function HoverAvatar({ className }: HoverAvatarProps) {
           onMouseLeave={() => setIsHovered(false)}
           onFocus={() => setIsHovered(true)}
           onBlur={() => setIsHovered(false)}
-          aria-label="Ariz Faiyaz avatar"
+          aria-label="Shiv Ashutosh Singh avatar"
         >
           <img
             src={isHovered ? waveSrc : idleSrc}
-            alt="Ariz Faiyaz avatar"
+            alt="Shiv Ashutosh Singh avatar"
             className="h-full w-full object-contain"
             draggable={false}
           />
@@ -36,7 +36,7 @@ export function HoverAvatar({ className }: HoverAvatarProps) {
         </div>
       </div>
       <div className="mt-4 flex items-center justify-between">
-        <span className="text-sm text-muted-foreground">India</span>
+        <span className="text-sm text-muted-foreground">Hyderabad, India</span>
         <span className="rounded-full border border-border bg-background px-2.5 py-1 text-xs font-medium text-muted-foreground">
           Available
         </span>

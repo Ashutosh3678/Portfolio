@@ -13,9 +13,9 @@ export interface Profile {
   pronouns: string;
   bio: string;
   githubUsername: string;
-  xUrl: string;
   linkedinUrl: string;
-  calendarUrl: string;
+  websiteUrl: string;
+  xUrl: string;
   currentlyBuilding: string;
   socials: SocialLink[];
 }

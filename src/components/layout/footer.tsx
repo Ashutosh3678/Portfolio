@@ -9,7 +9,7 @@ const footerLinks = [
 ];
 
 export function Footer() {
-  const footerSocials = ["X", "Email", "GitHub", "LinkedIn"]
+  const footerSocials = ["Website", "Email", "GitHub", "LinkedIn"]
     .map((label) => profile.socials.find((social) => social.label === label))
     .filter((social): social is (typeof profile.socials)[number] => Boolean(social));
 

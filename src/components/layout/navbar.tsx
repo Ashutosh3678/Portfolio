@@ -4,7 +4,7 @@ import { ThemeToggle } from "@/components/layout/theme-toggle";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Blogs", href: "/blogs" },
+  { label: "Achievements", href: "/#achievements" },
 ];
 
 export function Navbar() {

@@ -10,10 +10,10 @@ import { profile } from "@/data/profile";
 
 const contactRows = [
   {
-    label: "Schedule a free call",
+    label: "Connect on LinkedIn",
     description:
-      "30-minute strategy session to discuss work, ideas, or collaboration.",
-    href: profile.calendarUrl,
+      "Let's connect and discuss work, ideas, or collaboration.",
+    href: profile.linkedinUrl,
     icon: MessageCircle,
     external: true,
   },
@@ -26,6 +26,14 @@ const contactRows = [
     external: false,
   },
   {
+    label: "ashutosh.works",
+    description:
+      "Visit my personal website to explore my work and projects.",
+    href: profile.websiteUrl,
+    icon: ArrowUpRight,
+    external: true,
+  },
+  {
     label: "Connect on X",
     description:
       "Follow my builds, updates, experiments, and random tech thoughts.",
@@ -36,11 +44,12 @@ const contactRows = [
 ];
 
 export function ContactCard() {
-  const [status, setStatus] = useState<"idle" | "error" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "error" | "success">("idle");
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const name = String(formData.get("name") ?? "").trim();
     const email = String(formData.get("email") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
@@ -50,8 +59,25 @@ export function ContactCard() {
       return;
     }
 
-    event.currentTarget.reset();
-    setStatus("success");
+    setStatus("sending");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (!response.ok) {
+        setStatus("error");
+        return;
+      }
+
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -126,13 +152,13 @@ export function ContactCard() {
               placeholder="Tell me a little about what you are building."
             />
           </div>
-          <Button type="submit" className="w-full">
+          <Button type="submit" className="w-full" disabled={status === "sending"}>
             <Send className="h-4 w-4" />
-            Send Message
+            {status === "sending" ? "Sending..." : "Send Message"}
           </Button>
           {status === "error" && (
             <p className="text-sm text-muted-foreground">
-              Please fill out all fields before sending.
+              Please fill out all fields correctly and try again.
             </p>
           )}
           {status === "success" && (

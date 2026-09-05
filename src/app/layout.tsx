@@ -12,50 +12,45 @@ const inconsolata = Inconsolata({
 });
 
 export const metadata: Metadata = {
-  title: "Ariz Faiyaz | Backend & Full Stack Developer",
-  verification: {
-    google: "k6_pejfpA1-IRL-TXSnnUTFzK8K5lXYOl3hM5ofuE0M",
-  },
+  title: "Shiv Ashutosh Singh | Full-Stack Developer",
   description:
-    "Portfolio of Ariz Faiyaz, a backend and full-stack developer building scalable APIs, MERN stack apps, PostgreSQL systems, Docker-based workflows, and real-world web products.",
+    "Portfolio of Shiv Ashutosh Singh, a full-stack developer building scalable APIs, MERN stack apps, GraphQL systems, and real-world web products.",
   keywords: [
-    "Ariz Faiyaz",
-    "arizfaiyaz",
-    "arizFaiyaz",
-    "Nishu",
-    "NishuFaiyaz",
-    "arizfaiyaz web dev",
-    "Ariz Faiyaz portfolio",
+    "Shiv Ashutosh Singh",
+    "Ashutosh Singh",
+    "Ashutosh3678",
+    "ashutosh.works",
+    "Shiv Ashutosh Singh portfolio",
     "Backend Developer",
     "Full Stack Developer",
     "MERN Developer",
     "React Developer",
     "Node.js Developer",
-    "PostgreSQL Developer",
+    "GraphQL Developer",
   ],
-  authors: [{ name: "Ariz Faiyaz" }],
-  creator: "Ariz Faiyaz",
+  authors: [{ name: "Shiv Ashutosh Singh" }],
+  creator: "Shiv Ashutosh Singh",
   openGraph: {
-    title: "Ariz Faiyaz | Backend & Full Stack Developer",
+    title: "Shiv Ashutosh Singh | Full-Stack Developer",
     description:
-      "Backend and full-stack developer focused on scalable APIs, MERN apps, PostgreSQL, Docker, and product engineering.",
-    url: "https://arizfaiyaz.vercel.app/",
-    siteName: "Ariz Faiyaz",
+      "Full-stack developer focused on scalable APIs, MERN apps, GraphQL, and product engineering.",
+    url: "https://ashutosh.works/",
+    siteName: "Shiv Ashutosh Singh",
     type: "website",
     images: [
       {
         url: "/images/projects/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Ariz Faiyaz Portfolio",
+        alt: "Shiv Ashutosh Singh Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ariz Faiyaz | Backend & Full Stack Developer",
+    title: "Shiv Ashutosh Singh | Full-Stack Developer",
     description:
-      "Portfolio of Ariz Faiyaz, backend and full-stack developer.",
+      "Portfolio of Shiv Ashutosh Singh, full-stack developer.",
     images: ["/images/projects/og-image.png"],
   },
 };

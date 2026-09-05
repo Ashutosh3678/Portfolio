@@ -1,8 +1,8 @@
 import { quotes } from "@/data/quotes";
 import type { Quote } from "@/types/portfolio";
 
-export const VISITOR_ID_COOKIE = "ariz_portfolio_visitor_id";
-export const VISITOR_NUMBER_COOKIE = "ariz_portfolio_visitor_number";
+export const VISITOR_ID_COOKIE = "ashutosh_portfolio_visitor_id";
+export const VISITOR_NUMBER_COOKIE = "ashutosh_portfolio_visitor_number";
 export const INITIAL_VISITOR_COUNT = 120;
 export const VISITOR_COUNTER_NAME = "main";
 export const ONE_YEAR_SECONDS = 60 * 60 * 24 * 365;

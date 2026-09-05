@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: "Ariz Faiyaz",
-  url: "https://arizfaiyaz.vercel.app/",
-  title: "Ariz Faiyaz - Full-Stack Developer",
+  name: "Shiv Ashutosh Singh",
+  url: "https://ashutosh.works/",
+  title: "Shiv Ashutosh Singh - Full-Stack Developer",
   description:
-    "Personal developer portfolio for Ariz Faiyaz, a backend-focused full-stack developer building clean, scalable web products.",
-  author: "Ariz Faiyaz",
+    "Personal developer portfolio for Shiv Ashutosh Singh, a full-stack developer building clean, scalable web products.",
+  author: "Shiv Ashutosh Singh",
 };

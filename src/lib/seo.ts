@@ -26,7 +26,7 @@ export const defaultMetadata: Metadata = {
         url: "/images/projects/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Ariz Faiyaz developer portfolio",
+        alt: "Shiv Ashutosh Singh developer portfolio",
       },
     ],
   },

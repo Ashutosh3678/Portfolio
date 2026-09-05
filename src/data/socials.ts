@@ -13,13 +13,13 @@ export function createSocials(githubUsername: string, email: string): SocialLink
     : []),
     {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/ariz-faiyaz/",
+      href: "https://www.linkedin.com/in/%C3%A3shutosh-si%C3%B1gh/",
       icon: "linkedin",
     },
     {
-      label: "X",
-      href: "https://x.com/thatnerdwalaguy",
-      icon: "x",
+      label: "Website",
+      href: "https://ashutosh.works",
+      icon: "website",
     },
     {
       label: "Email",
@@ -29,4 +29,4 @@ export function createSocials(githubUsername: string, email: string): SocialLink
   ];
 }
 
-export const socials = createSocials("arizfaiyaz", "arizfaiyazwork@gmail.com");
+export const socials = createSocials("Ashutosh3678", "ashutoshsingh2081@gmail.com");
